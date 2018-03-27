@@ -39,6 +39,7 @@ int main()
     else if( column < 0 || row < 0 || column > 2 || row > 2 )
     {
       cout<<"Values must be between 0 and 2.\n";
+      turn = O; 
     }
 
     board [row][column] = turn;
@@ -51,21 +52,7 @@ int main()
     {
         turn = X; 
     }
-    cout<<turn<<" 's turn.\n"; 
-    cout<<"Which column and row (0-2, or -1 for both to quit)?\n"; 
-    cin>>column; 
-    cin>>row; 
-    if (column == QUIT && row == QUIT) 
-    {
-        playing = false; 
-    }
-    else if ( column < 0 || row < 0 || column > 2 || row > 2)
-    {
-        cout<<"Values must be between 0 and 2.\n"; 
-        turn = O; 
-    }
-    board [row][column] = turn; 
-    turn = X; 
+
     //TODO: Place the piece and swap turns
     //Outline
     //1. When neither of the (above) if nor else if statements are true, then...
